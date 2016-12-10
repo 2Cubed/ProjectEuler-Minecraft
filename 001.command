@@ -4,6 +4,7 @@
 /scoreboard players set 001_THREE value 3  # Chain, Unconditional
 /scoreboard players set 001_FIVE value 5  # Chain, Unconditional
 /scoreboard players set 001_FIFTEEN value 15  # Chain, Unconditional
+/blockdata ~1 ~ ~ {auto:1b}  # Chain, Unconditional
 /scoreboard players test 001_counter value 0 998  # Repeat, Unconditional
 /scoreboard players add 001_counter value 1  # Chain
 /scoreboard players operation 001_temp value = 001_counter value  # Chain, Unconditional
@@ -21,3 +22,4 @@
 /scoreboard players test 001_counter value 999 999  # Chain, Unconditional
 /tellraw @a [{"text":"[Problem 001] Total: "},{"score":{"name":"001_total","objective":"value"}}]  # Chain
 /scoreboard players set 001_counter value -1  # Chain
+/blockdata ~-17 ~ ~ {auto:0b}  # Chain
